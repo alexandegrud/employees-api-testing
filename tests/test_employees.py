@@ -9,7 +9,7 @@ def test_create_new_employee(init_employee):
     init_employee.assertions.is_dicts_equal(response.json(), employee_body)
 
 def test_get_single_employee(init_employee):
-    employee_id = 3
+    employee_id = 1
     response = init_employee.get_single_employee(employee_id)
     init_employee.assertions.is_equal(response.status_code, 200)
     init_employee.assertions.is_dicts_equal(response.json(),
